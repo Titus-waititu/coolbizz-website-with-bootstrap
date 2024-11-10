@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'app:index' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">CoolBizz</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'app:index' %}">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'app:index' %}">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+        <h1>Service Details</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list">
+              <a href="#" class="active">Web Design</a>
+              <a href="#">Software Development</a>
+              <a href="#">Product Management</a>
+              <a href="#">Graphic Design</a>
+              <a href="#">Marketing</a>
+            </div>
+
+            <h4>Features and Benefits</h4>
+            <p>
+              This project emphasizes reliability and functionality, ensuring it meets user expectations at every level. The design balances aesthetics and usability, with attention to seamless interaction and intuitive navigation. Each component has been crafted to provide value, maximize efficiency, and create an engaging experience for users.
+            </p>
+            
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
+            <h3>Innovative Solutions and Real-World Impact</h3>
+            <p>
+              Our services provide reliable and high-quality results, designed to exceed expectations. We focus on accuracy, responsiveness, and a commitment to delivering exceptional value. Each project phase is handled with expertise and care to ensure seamless and impactful solutions.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Comprehensive and dedicated support for all client needs.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Customized solutions tailored to meet unique project requirements.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Focus on efficiency and user-friendly designs.</span></li>
+            </ul>
+            <p>
+              We prioritize quality and reliability in all aspects of our work. Our team is dedicated to maintaining the highest standards and delivering projects that provide lasting value. With attention to every detail, we ensure that each project aligns with client goals and expectations.
+            </p>
+            <p>
+              Our approach combines innovation with proven methodologies to produce effective, sustainable solutions. From planning to implementation, we are committed to supporting our clients' success and achieving measurable impact. Our team is passionate about creating value through thoughtful design and strategic execution.
+            </p>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+ {% endblock %}
+
+</body>
+
+</html>

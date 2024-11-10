@@ -1,0 +1,902 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'app:index' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename logo">CoolBizz</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'app:index' %}" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Better Solutions For Your Business</h1>
+            <p>We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Our team is dedicated to delivering high-quality services, designed to meet your unique needs efficiently and effectively.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Professional support tailored to each project’s goals.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Attention to detail to ensure exceptional results in every task.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Commitment to delivering results that exceed expectations.</span></li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>We strive to create value through strategic planning and meticulous execution, delivering outcomes that drive success and satisfaction. Our approach ensures each project is handled with care and precision, meeting industry standards and exceeding client expectations.</p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        
+        </div>
+        
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+              <h3><span>Quality and Reliability </span><strong>with Attention to Detail</strong></h3>
+              <p>
+                Our mission is to provide exceptional service and outcomes that meet the highest standards. We focus on quality in every aspect, ensuring each project is handled with care and precision.
+              </p>
+            </div>
+          
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+          
+              <div class="faq-item faq-active">
+                <h3><span>01</span> What sets us apart from other providers?</h3>
+                <div class="faq-content">
+                  <p>Our commitment to client success and satisfaction is unmatched. We focus on delivering solutions that align with your goals, ensuring a seamless experience from start to finish.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+          
+              <div class="faq-item">
+                <h3><span>02</span> How do we ensure quality and consistency?</h3>
+                <div class="faq-content">
+                  <p>We utilize a structured process, focusing on each project phase with attention to detail. Our team leverages expertise and innovation to provide consistent, high-quality results that exceed expectations.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+          
+              <div class="faq-item">
+                <h3><span>03</span> What types of projects do we specialize in?</h3>
+                <div class="faq-content">
+                  <p>We specialize in projects that require tailored, strategic solutions. From design to implementation, we focus on providing services that create lasting value and impactful results for our clients.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+          
+            </div>
+          
+          </div>
+          
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="{% static 'assets/img/why-us.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+          
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+      
+          <div class="col-lg-6 d-flex align-items-center">
+            <img src="{% static 'assets/img/skills.png' %}" class="img-fluid" alt="Skills Illustration">
+          </div>
+      
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+      
+            <h3>Expertise and Skills for High-Quality Outcomes</h3>
+            <p class="fst-italic">
+              Our team is skilled in a wide range of technologies and tools, enabling us to deliver exceptional results tailored to your needs.
+            </p>
+      
+            <div class="skills-content skills-animation">
+      
+              <div class="progress">
+                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+      
+              <div class="progress">
+                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+      
+              <div class="progress">
+                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+      
+              <div class="progress">
+                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+      
+            </div>
+      
+          </div>
+        </div>
+      
+      </div>
+      
+
+    </section><!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Providing tailored solutions that meet your unique needs with precision and care, ensuring quality and reliability in every project.</p>
+      </div><!-- End Section Title -->
+      
+      <div class="container">
+
+        <div class="row gy-4">
+      
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-activity icon"></i></div>
+              <h4><a href="" class="stretched-link">Our Services</a></h4>
+              <p>We offer a variety of services to meet your needs, with attention to detail and professionalism.</p>
+            </div>
+          </div><!-- End Service Item -->
+      
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="" class="stretched-link">Consultation</a></h4>
+              <p>Our team provides expert consultation to help you navigate through challenges and make informed decisions.</p>
+            </div>
+          </div><!-- End Service Item -->
+      
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="" class="stretched-link">Project Management</a></h4>
+              <p>We manage projects with efficiency and precision, ensuring timely delivery and high-quality results.</p>
+            </div>
+          </div><!-- End Service Item -->
+      
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="" class="stretched-link">Marketing Solutions</a></h4>
+              <p>We provide innovative marketing strategies to help grow your brand and reach the right audience.</p>
+            </div>
+          </div><!-- End Service Item -->
+      
+        </div>
+      
+      </div>
+      
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="{% static 'assets/img/cta-bg.jpg' %}" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Take Action Now</h3>
+            <p>Start improving your business today with our tailored solutions. We provide exceptional services designed to meet your unique needs and help you grow. Join us now and see the difference.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Get Started</a>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Portfolio</h2>
+        <p>Explore our diverse range of projects that showcase our expertise in delivering high-quality solutions across various industries.</p>
+      </div><!-- End Section Title -->
+      
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Card</li>
+            <li data-filter=".filter-branding">Web</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" class="img-fluid" alt="App 1">
+              <div class="portfolio-info">
+                <h4>Curlology</h4>
+                <p>Innovative mobile app with user-friendly interface and fast performance.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" title="Mobile App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" class="img-fluid" alt="Product 1">
+              <div class="portfolio-info">
+                <h4>Honeycomb</h4>
+                <p>Modern product design that enhances usability and efficiency.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" class="img-fluid" alt="Branding 1">
+              <div class="portfolio-info">
+                <h4>flower pot</h4>
+                <p>Creative branding strategy that resonates with customers.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" class="img-fluid" alt="App 2">
+              <div class="portfolio-info">
+                <h4>shades</h4>
+                <p>A powerful mobile app that integrates seamlessly with modern technologies.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" title="Mobile App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" class="img-fluid" alt="Product 2">
+              <div class="portfolio-info">
+                <h4>desk lamp</h4>
+                <p>desk lamp brings innovative features and an intuitive design.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" class="img-fluid" alt="Branding 2">
+              <div class="portfolio-info">
+                <h4>Stool</h4>
+                <p>A fresh approach to branding that captivates and engages audiences.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" class="img-fluid" alt="App 3">
+              <div class="portfolio-info">
+                <h4>camera</h4>
+                <p>An innovative mobile solution that improves user experience.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" title="Mobile App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-8.jpg' %}" class="img-fluid" alt="Product 3">
+              <div class="portfolio-info">
+                <h4>glass</h4>
+                <p>Design and functionality combined for maximum performance.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-8.jpg' %}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" class="img-fluid" alt="Branding 3">
+              <div class="portfolio-info">
+                <h4>watch</h4>
+                <p>A unique branding strategy that elevates your business identity.</p>
+                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" title="Branding 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'app:portfolio-details' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+          </div><!-- End Portfolio Container -->
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  <!-- Team Section -->
+<section id="team" class="team section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Team</h2>
+    <p>Our team consists of experienced professionals dedicated to delivering outstanding results.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-member d-flex align-items-start">
+          <div class="pic"><img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="Walter White"></div>
+          <div class="member-info">
+            <h4>Walter White</h4>
+            <span>Chief Executive Officer</span>
+            <p>Responsible for overseeing the company's operations and ensuring its success.</p>
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-member d-flex align-items-start">
+          <div class="pic"><img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="Sarah Jhonson"></div>
+          <div class="member-info">
+            <h4>Sarah Jhonson</h4>
+            <span>Product Manager</span>
+            <p>Oversees the product development lifecycle and ensures the product meets customer needs.</p>
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-member d-flex align-items-start">
+          <div class="pic"><img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="William Anderson"></div>
+          <div class="member-info">
+            <h4>William Anderson</h4>
+            <span>Chief Technology Officer</span>
+            <p>Leads the company's technology and development efforts to ensure innovative solutions.</p>
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="team-member d-flex align-items-start">
+          <div class="pic"><img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="Amanda Jepson"></div>
+          <div class="member-info">
+            <h4>Amanda Jepson</h4>
+            <span>Accountant</span>
+            <p>Manages financial operations and ensures the company’s financial health and compliance.</p>
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Team Section -->
+
+
+  <!-- Pricing Section -->
+<section id="pricing" class="pricing section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Pricing</h2>
+    <p>Choose a plan that fits your needs and start using our services today.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-item">
+          <h3>Free Plan</h3>
+          <h4><sup>$</sup>0<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Basic features included</span></li>
+            <li><i class="bi bi-check"></i> <span>Limited support</span></li>
+            <li><i class="bi bi-check"></i> <span>Access to free resources</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Advanced features</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Premium support</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pricing-item featured">
+          <h3>Business Plan</h3>
+          <h4><sup>$</sup>29<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>All free plan features</span></li>
+            <li><i class="bi bi-check"></i> <span>Full support</span></li>
+            <li><i class="bi bi-check"></i> <span>Access to business tools</span></li>
+            <li><i class="bi bi-check"></i> <span>Advanced features included</span></li>
+            <li><i class="bi bi-check"></i> <span>Premium resources</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="pricing-item">
+          <h3>Developer Plan</h3>
+          <h4><sup>$</sup>49<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>All business plan features</span></li>
+            <li><i class="bi bi-check"></i> <span>Access to developer tools</span></li>
+            <li><i class="bi bi-check"></i> <span>Premium technical support</span></li>
+            <li><i class="bi bi-check"></i> <span>Advanced API integrations</span></li>
+            <li><i class="bi bi-check"></i> <span>Exclusive resources for developers</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Our services have helped many clients achieve their goals with confidence and satisfaction.</p>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Providing smooth and consistent support, we deliver exceptional service with attention to detail. Our team is committed to excellence, ensuring every experience is seamless and efficient.</span>
+
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Temporary export, however, there were bad things, things that should not have been done, work that was misused. Some errors, some delays, and negligence resulted in negative consequences. We regret the mistakes, and we're committed to improving the future.</span>
+
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Except for some, export of work was minimal, though it was significant in some cases. We took responsibility for the delays and are striving to minimize them in the future. We aim to reduce the impact of these issues and improve our processes.</span>
+
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>It is unfortunate that there was some pain caused by the situation, but no one is to blame for the many minimal exports. We aim to reduce these minimal issues and ensure no further pain. We apologize for the delays and strive to improve processes moving forward.</span>
+
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Some people may have experienced issues with certain actions that were unavoidable. There was some delay in responding to these issues, but no one is truly at fault for the situation. We apologize for the inconvenience and are working to ensure better service moving forward. We ask for your patience as we address these challenges.</span>
+
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Faq 2 Section -->
+    <section id="faq-2" class="faq-2 section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Great pains were taken to ensure the comfort and convenience of all. There are certain needs that arise from unforeseen circumstances. It's important to provide a sense of belonging and purpose. Everyone is entitled to seek satisfaction. There are obstacles that can prevent us from fulfilling our commitments, but we are striving to overcome them. We want to ensure that we meet your expectations and fulfill our duties to the best of our abilities.</p>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What are the key benefits of using this service?</h3>
+                <div class="faq-content">
+                  <p>Our service offers a range of advantages, including seamless integration, ease of use, and consistent support. We focus on delivering value that meets your unique needs with minimal hassle.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What features does the product offer?</h3>
+                <div class="faq-content">
+                  <p>Our product includes multiple features such as intuitive interfaces, customizable options, and advanced functionalities designed to enhance your user experience. The product adapts to various needs and ensures a user-friendly environment.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How can I get customer support?</h3>
+                <div class="faq-content">
+                  <p>You can reach our customer support team through various channels, including phone, email, and live chat. We are available 24/7 to assist you with any inquiries or issues you may have.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How do I set up the service on my account?</h3>
+                <div class="faq-content">
+                  <p>Setting up the service is easy. Simply follow the step-by-step guide in our documentation. If you need additional help, our support team is ready to guide you through the process.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What are the payment options available?</h3>
+                <div class="faq-content">
+                  <p>We accept various payment methods, including credit cards, PayPal, and bank transfers. You can choose the method that suits you best during the checkout process.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            
+            </div>
+            
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>His needs are met through something that escapes, though it does indeed aim for consistency and clarity.</p>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>kutus, Kirinyaga</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+254 763 445 278</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>coolbizz@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+  
+ 
+{% endblock %}
+</body>
+
+</html>
